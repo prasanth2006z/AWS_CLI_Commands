@@ -1,0 +1,77 @@
+29/03/2019
+
+Route 53
+Elastic Load Balancing
+VPC
+VPN
+Auto Scaling
+EC2
+Lambda
+EBS
+EFS
+CloudTrail
+CloudWatch
+------------------------
+30/03/2019
+
+S3
+Backup
+S3 Glacier
+Snowball
+CloudFront
+FSx
+Storage Gateway
+IAM
+--------------------------
+31/03/2019
+
+Elastic Beanstalk
+CloudFormation
+Elasticsearch Service
+ECS
+ElastiCache
+
+Artifact
+Cognito
+Directory Service
+Firewall Manager
+Cloud Directory
+GuardDuty
+Inspector
+
+SQS
+SNS
+SWF
+MQ
+SES
+API Gateway
+----------------------------
+01/04/2019
+ECR
+EKS
+EMR
+MSK
+Direct Connect
+Global Accelerator
+App Mesh
+Cloud Map
+-----------------------------
+02/04/2019
+Athena
+Glue
+Kinesis
+Trusted Advisor
+Organizations
+Lightsail
+CloudSearch
+Data Pipeline
+QuickSight
+Batch
+----------------------------
+03/04/2019
+Aurora
+DocumentDB
+DynamoDB
+Neptune
+RDS
+Redshift
