@@ -1,0 +1,39 @@
+RDS
+------
+Amazon RDS can automatically back up your database.
+Flexibility of being able to easily scale the compute resources or storage capacity 
+Amazon RDS makes it easy to use replication to enhance 
+	database availability, 
+	improve data durability, 
+	scale beyond the capacity constraints of a single database instance for read-heavy database workloads.
+With optional Multi-AZ deployments, Amazon RDS also manages 
+	synchronous data replication across Availability Zones with automatic failover.
+Amazon CloudWatch “Replica Lag” metric.
+
+
+------------------------------------------------------------------------------------------------------
+1) Multi -AZ
+	Amazon RDS automatically provisions and maintains a synchronous “standby” replica in a different Availability Zone.
+	With Multi-AZ deployments, replication is transparent: you do not interact directly with the standby, and it cannot be used to serve read traffic. 
+	The “source” Multi AZ-DB instance provides you with enhanced write availability and data durability, and the associated read replica would improve read traffic scalability.
+
+2)Read replica:
+	Amazon RDS supports cross-region read replicas. 
+	asynchronous replication
+
+3) Security:
+	DB Subnet Group.
+
+4)Snapshots and Backup
+	automatic: 7-35 days
+	Mannual :
+	When you perform a restore operation to a point in time or from a DB Snapshot, a new DB Instance is created with a new endpoint 
+	backup window :  There is no I/O suspension for Multi-AZ DB deployments, since the backup is taken from the standby.
+	Automated backups are deleted when the DB instance is deleted. Only manually created DB Snapshots are retained after the DB Instance is deleted.
+
+
+Aurora
+-----------
+Amazon Aurora automatically maintains 6 copies of your data across 3 Availability Zones and will automatically attempt to recover your database in a healthy AZ with no data loss.
+Amazon Aurora Global Database is a feature that allows a single Amazon Aurora database to span multiple AWS regions.
+Parallel Query can be enabled and disabled dynamically at both the global and session level using the aurora_pq parameter.
