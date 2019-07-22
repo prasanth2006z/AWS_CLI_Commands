@@ -1,0 +1,42 @@
+#Install Docker
+yum install docker
+
+#Start Docker
+service docker start
+
+#Attach ec2-user
+sudo usermod -a -G docker ec2-user
+
+#build 
+docker build -t docker-example .
+
+#run 
+docker run -t -i -p 8080:8080 docker-sample:latest
+
+
+#Docker Images
+docker images
+
+#Remove Docker Images
+docker rmi <ImageId,ImageID>
+
+#Docker containeres
+Docker ps -as
+
+#Remove Docker containeres
+Docker rm <name>
+
+
+#Login to ECR
+aws ecr get-login --no-include-email --region=ap-south-1
+
+ Example : docker login -u AWS -p eyJwYXlsb2FkIjoiNExrK3YwVi9BdUF6bGxKR28zVkwySzQ...
+ Copy and paste in console.
+
+#Tag docker image
+docker tag <dockerimage:version> 969968687208.dkr.ecr.ap-south-1.amazonaws.com/testapp
+
+#Push Docker Image to ECR
+docker push 969968687208.dkr.ecr.ap-south-1.amazonaws.com/testapp
+
+https://google.qwiklabs.com/focuses/1029?catalog_rank=%7B%22rank%22%3A1%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&locale=en&parent=catalog&search_id=2632105
